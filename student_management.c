@@ -195,7 +195,8 @@ void updateStudent()
             printf("Enter New Marks: ");
             scanf("%f", &s.marks);
 
-            fseek(fp, -sizeof(s), SEEK_CUR);
+            fseek(fp, -(long)
+            sizeof(s), SEEK_CUR);
             fwrite(&s, sizeof(s), 1, fp);
 
             printf("Record Updated Successfully!\n");
